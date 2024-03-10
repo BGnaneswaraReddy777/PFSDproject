@@ -1,0 +1,31 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+< html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% block body %}
+<div class="container text-center">
+  <div class="row">
+    <div class="col order-last"  style="; background-color: #f2f2f2; padding-top:10px ">
+        <div>
+            <img src = "{% static 'xerox.jpg' %}" alt="My image" width="500" height="300"/>
+</div>
+    </div>
+    <div class="col" style="; background-color: #f2f2f2; padding-top:50px">
+              <p style="font-size: 35px; background-color: #f2f2f2; "> ℍ𝕒𝕧𝕖 𝕪𝕠𝕦 𝕖𝕧𝕖𝕣 𝕥𝕣𝕚𝕖𝕕 𝕆𝕟𝕝𝕚𝕟𝕖 ℕ𝕦𝕥𝕣𝕚𝕥𝕚𝕠𝕟 ℂ𝕠𝕟𝕤𝕦𝕝𝕥𝕒𝕥𝕚𝕠𝕟? 𝔾𝕚𝕧𝕖 𝕚𝕥 𝕒 𝕥𝕣𝕪 𝕗𝕠𝕣 𝕒 𝕙𝕖𝕒𝕝𝕥𝕙𝕚𝕖𝕣 𝕪𝕠𝕦.</p>
+<a href="Consultation/">
+  <button class="consult-button" style="; background-color: #f2f2f2; ">Consult Nutritionists Now</button>
+</a>
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock %}
+</body>
+</html>

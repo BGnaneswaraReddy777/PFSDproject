@@ -1,0 +1,115 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritional Information About Specific Foods</title>
+   <style>
+    .food-blogs {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .food-blog {
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        width: 45%; /* Adjust the width of each block as needed */
+        text-align: center;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .food-blog:hover {
+        background-color: #f2f2f2;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .food-blog img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+</style>
+
+</head>
+<body>
+{% block body %}
+    <div class="container">
+        <h2 class="title"><center>Nutritional Information About Specific Foods</center></h2>
+        <div class="food-blogs">
+            <div class="food-blog" onclick="handleFoodClick(0)">
+                <div>
+                    <img src="{% static 'Milk.jpg' %}" alt="Milk" width="250" height="200"/>
+                    <h2>Milk</h2>
+                </div>
+            </div>
+            <div class="food-blog" onclick="handleFoodClick(1)">
+                <div>
+                    <img src="{% static 'Almond.jpg' %}" alt="Almond" width="250" height="200"/>
+                    <h2>Almond</h2>
+                </div>
+            </div>
+            <div class="food-blog" onclick="handleFoodClick(2)">
+                <div>
+                    <img src="{% static 'Fruits.jpg' %}" alt="Fruits" width="250" height="200"/>
+                    <h2>Fruits</h2>
+                </div>
+            </div>
+            <div class="food-blog" onclick="handleFoodClick(3)">
+                <div>
+                    <img src="{% static 'Indian.jpg' %}" alt="Indian Millets" width="250" height="200"/>
+                    <h2>Indian Millets</h2>
+                </div>
+            </div>
+            <!-- Add more food blocks if needed -->
+        </div>
+        <div class="modal" id="modal" style="display: none;">
+            <div class="modal-content">
+                <h2 id="foodName"></h2>
+                <p id="foodDescription"></p>
+                <button class="close-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const foods = [
+            {
+                name: 'Milk',
+                image: 'Milk.jpeg',
+                description: 'Milk is a nutritious dairy product known for its high calcium content, which is essential for strong bones and teeth. It is also a good source of protein, providing all essential amino acids needed for tissue repair and growth. Additionally, milk is rich in vitamins, including vitamin D for calcium absorption and vitamin A for vision. Milk contains vital minerals like phosphorus, magnesium, and potassium, supporting various bodily functions. Its high water content aids in maintaining proper hydration. The fat content in milk varies depending on the type, from whole milk to skim milk. Lactose, a natural sugar in milk, serves as an energy source.'
+            },
+            {
+                name: 'Almond',
+                image: 'Milk.jpeg',
+                description: 'Almonds are nutrient-dense nuts that are rich in healthy fats, protein, fiber, vitamins, and minerals. They are particularly known for their high content of monounsaturated fats, which are beneficial for heart health by reducing LDL cholesterol levels. Almonds are also a good source of vitamin E, an antioxidant that helps protect cells from damage caused by free radicals.'
+            },
+            {
+                name: 'Fruits',
+                image: 'Milk.jpeg',
+                description: 'Fruits and nuts that are rich in healthy fats, protein, fiber, vitamins, and minerals. They are particularly known for their high content of monounsaturated fats, which are beneficial for heart health by reducing LDL cholesterol levels. Almonds are also a good source of vitamin E, an antioxidant that helps protect cells from damage caused by free radicals.'
+            },
+            {
+                name: 'Indian Millets',
+                image: 'Milk.jpeg',
+                description: 'Indian Millets that are rich in healthy fats, protein, fiber, vitamins, and minerals. They are particularly known for their high content of monounsaturated fats, which are beneficial for heart health by reducing LDL cholesterol levels. Almonds are also a good source of vitamin E, an antioxidant that helps protect cells from damage caused by free radicals.'
+            },
+            // Add other food items here
+        ];
+
+        function handleFoodClick(index) {
+            const food = foods[index];
+            document.getElementById('foodName').innerText = food.name;
+            document.getElementById('foodDescription').innerText = food.description;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+{% endblock %}
+</body>
+</html>

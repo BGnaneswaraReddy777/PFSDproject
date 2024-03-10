@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        @keyframes slideIn {
+            from {
+                opacity: 10;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 50;
+                transform: translateY(0);
+            }
+        }
+
+        .container1 {
+            animation: slideIn 0.5s ease-out;
+        }
+        .container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .bodycontainer{
+            width: 270px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px  rgba(0,0,0,0.2);
+        }
+        .bodycontainer h1 {
+            text-align: center;
+        }
+        .bodycontainer form {
+            text-align: center;
+        }
+        .bodycontainer label {
+            display: block;
+            margin-bottom: 0px;
+        }
+        .bodycontainer input[type="text"],
+        .bodycontainer input[type="password"],
+        .bodycontainer input[type="email"],
+        .bodycontainer input[type="tel"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 0px;
+            border: px solid #ccc;
+            border-radius: 0px;
+        }
+        .bodycontainer button {
+            width: 100%;
+            padding: 10px;
+            background-color:#ffffff ;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            color: #000000;
+        }
+        .bodycontainer button:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+{% include 'navbar.html' %}
+{% block body %}
+{% if messages %}
+  {% for message in messages %}
+   {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+  {% endfor %}
+
+{% endif %}
+    <div class="container1">
+        <div class="bodycontainer">
+            <h1>Login</h1>
+            <form method="post" action="{% url 'login1' %}">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+<!--    <input type="submit"  value="Login">-->
+                <button type="submit" value="Login">Submit</button>
+</form>
+
+<!--             <label> <center>OR</center></label>-->
+<!--            <a href="/">-->
+<!--                <button class="consult-button">Login</button>-->
+<!--            </a>-->
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

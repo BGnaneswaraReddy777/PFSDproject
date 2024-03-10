@@ -1,0 +1,18 @@
+
+    .navbar {
+             background-color: #ffffff;  /*Navbar background color */
+            /* border-bottom: 5px solid #cccccc;  Border below navbar */
+           padding: 3px;
+            position: fixed; /* Make the navbar fixed */
+            width: 100%; /* Set the width to fill the viewport */
+            top: 0; /* Position at the top of the viewport */
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Ensure the navbar stays on top of other content */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a box shadow */
+        }
+
+        /* Style for the content area */
+        .content {
+            padding-top: 70px; /* Padding for content area to prevent content from being hidden under the navbar */
+        }

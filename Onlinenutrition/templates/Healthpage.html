@@ -1,0 +1,119 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <style>
+        body {
+            padding-top: 50px; /* Adjust the padding according to your preference */
+        }
+
+        .container {
+            padding: 20px; /* Add padding to the container */
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 0px;
+            margin-top: 0px;
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .answer {
+            display: none;
+        }
+        .toggle {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+{% block body %}
+    <div class="container">
+        <h1 class="title"><center>𝐅𝐫𝐞𝐪𝐮𝐞𝐧𝐭𝐥𝐲 𝐀𝐬𝐤𝐞𝐝 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬</center></h1>
+        <div class="questions">
+            <div class="question" id="question1">
+                <div style="display: flex; justify-content: space-between;">
+                    <h3>What constitutes a balanced diet?</h3>
+                    <span class="toggle" onclick="toggleQuestion('question1')">+</span>
+                </div>
+                <p class="answer">A balanced diet includes a variety of foods like fruits, vegetables, whole grains, lean proteins, and healthy fats. Portion control is important, and it's essential to stay hydrated.</p>
+            </div>
+            <div class="question" id="question2">
+                <div style="display: flex; justify-content: space-between;">
+                    <h3>How many calories should I consume daily?</h3>
+                    <span class="toggle" onclick="toggleQuestion('question2')">+</span>
+                </div>
+                <p class="answer">Calorie needs vary based on factors like age, gender, weight, height, and activity level. You can use online calculators or consult a dietitian to determine your specific calorie needs.</p>
+            </div>
+            <div class="question" id="question3">
+                <div style="display: flex; justify-content: space-between;">
+                    <h3>What are macronutrients and micronutrients, and why are they important?</h3>
+                    <span class="toggle" onclick="toggleQuestion('question3')">+</span>
+                </div>
+                <p class="answer">Macronutrients (carbohydrates, proteins, and fats) provide energy, while micronutrients (vitamins and minerals) are essential for various physiological functions, including metabolism, immune function, and bone health.</p>
+            </div>
+            <div class="question" id="question4">
+                <div style="display: flex; justify-content: space-between;">
+                    <h3>What are some tips for grocery shopping for healthier food options?</h3>
+                    <span class="toggle" onclick="toggleQuestion('question4')">+</span>
+                </div>
+                <p class="answer">Focus on purchasing whole foods such as fruits, vegetables, lean proteins, whole grains, and healthy fats. Read food labels, avoid processed foods high in added sugars and unhealthy fats, and opt for organic and locally sourced products when possible.</p>
+            </div>
+            <div class="question" id="question5">
+                <div style="display: flex; justify-content: space-between;">
+                    <h3>How can I incorporate more fruits and vegetables into my diet?</h3>
+                    <span class="toggle" onclick="toggleQuestion('question5')">+</span>
+                </div>
+                <p class="answer">Aim to include a variety of fruits and vegetables in your meals and snacks. Experiment with different cooking methods, add them to smoothies, salads, soups, and stir-fries, and choose seasonal produce for freshness and flavor.</p>
+            </div>
+            <div class="question" id="question6">
+                <div style="display: flex; justify-content: space-between;">
+                    <h3>What are some common myths about dieting and nutrition that I should be aware of?</h3>
+                    <span class="toggle" onclick="toggleQuestion('question6')">+</span>
+                </div>
+                <p class="answer">Some common myths include the notion that certain foods can "burn fat" or that skipping meals promotes weight loss. It's important to rely on evidence-based information and consult with healthcare professionals or registered dietitians for personalized advice.</p>
+            </div>
+            <div class="question" id="question7">
+                <div style="display: flex; justify-content: space-between;">
+                    <h3>How can I manage portion sizes and avoid overeating?</h3>
+                    <span class="toggle" onclick="toggleQuestion('question7')">+</span>
+                </div>
+                <p class="answer">Use smaller plates, pay attention to hunger and fullness cues, practice mindful eating, and avoid eating in front of screens. Portion control containers and measuring utensils can also help with portion management.</p>
+            </div>
+            <!-- Add more questions and answers following the same structure -->
+            <!-- Repeat the above structure for each question -->
+        </div>
+    </div>
+
+    <script>
+        function toggleQuestion(questionId) {
+            var question = document.getElementById(questionId);
+            var answer = question.querySelector('.answer');
+            var toggle = question.querySelector('.toggle');
+
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                toggle.innerText = '+';
+            } else {
+                answer.style.display = 'block';
+                toggle.innerText = '-';
+            }
+        }
+    </script>
+{% endblock %}
+</body>
+</html>

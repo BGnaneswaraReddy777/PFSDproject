@@ -1,0 +1,84 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consult</title>
+</head>
+<body>
+{% block body %}
+  <div class="nutriinfo" style="margin-top: 10px; display: flex; flex-direction: column; align-items: center;">
+    <h1 style="font-size: 30px;"><b>𝑪𝒐𝒏𝒔𝒖l𝒕 𝑶𝒖𝒓 𝑬𝒙𝒑𝒆𝒓𝒕𝒔</b></h1>
+    <div style="display: flex; align-items: center; flex-direction: column;">
+      <div>
+<img src = "{% static 'consult.jpg' %}" alt="My image" width="300" height="250"/>      </div>
+      <div class="doctors-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; margin: 20px; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 400px; text-align: center;">
+          <img src = "{% static 'doctor1.jpg' %}" alt="My image" width="250" height="200"/>
+          <h2>Dr.Ajay</h2>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Specialty: Cardiologist</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Experience: 10 years</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Education: Ph.D. in Nutrition</p>
+<a href="{% url 'insert' %}">
+            <button class="consult-button">Book video Consult</button>
+          </a>
+        </div>
+         <div style="display: flex; flex-direction: column; align-items: center; margin: 20px; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 400px; text-align: center;">
+          <img src = "{% static 'doctor2.jpg' %}" alt="My image" width="250" height="200"/>
+          <h2>Dr.Kiran Kumar</h2>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Specialty: Pediatrician </p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Experience: 10 years</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Education: Ph.D. in Nutrition</p>
+<a href="{% url 'insert' %}">
+            <button class="consult-button">Book video Consult</button>
+          </a>
+        </div>
+           <div style="display: flex; flex-direction: column; align-items: center; margin: 20px; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 400px; text-align: center;">
+          <img src = "{% static 'doctor8.jpg' %}" alt="My image" width="250" height="200"/>
+          <h2>Dr.Sarah Johnson</h2>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Specialty: Psychiatrist</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Experience: 5 years</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Education: Ph.D. in Nutrition</p>
+<a href="{% url 'insert' %}">
+            <button class="consult-button">Book video Consult</button>
+          </a>
+        </div>
+           <div style="display: flex; flex-direction: column; align-items: center; margin: 20px; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 400px; text-align: center;">
+          <img src = "{% static 'doctor4.jpg' %}" alt="My image" width="250" height="200"/>
+          <h2>Dr.James Wilson</h2>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Specialty: Dermatologist</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Experience: 20 years</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Education: Ph.D. in Nutrition</p>
+<a href="{% url 'insert' %}">
+            <button class="consult-button">Book video Consult</button>
+          </a>
+        </div>
+           <div style="display: flex; flex-direction: column; align-items: center; margin: 20px; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 400px; text-align: center;">
+          <img src = "{% static 'doctor7.jpeg' %}" alt="My image" width="250" height="200"/>
+          <h2>Dr. Lisa Kim</h2>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Specialty: Neurologist</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Experience: 10 years</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Education: Ph.D. in Nutrition</p>
+<a href="{% url 'insert' %}">
+            <button class="consult-button">Book video Consult</button>
+          </a>
+        </div>
+           <div style="display: flex; flex-direction: column; align-items: center; margin: 20px; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 400px; text-align: center;">
+          <img src = "{% static 'docter6.jpg' %}" alt="My image" width="250" height="200"/>
+          <h2>Dr.William Thomas</h2>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Specialty: Oncologist</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Experience: 10 years</p>
+          <p style="font-size: 14px; color: #333; margin: 0px 0;">Education: Ph.D. in Nutrition</p>
+               <a href="/">
+            <button class="consult-button">Book video Consult</button>
+          </a>
+        </div>
+        <!-- Repeat the above doctor profile structure for other doctors -->
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

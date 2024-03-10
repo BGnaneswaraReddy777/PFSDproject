@@ -1,0 +1,96 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    /* CSS styles */
+    .page-container {
+      margin-top: 32px;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    .contact-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 400px;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .info-item {
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .contact-message {
+      font-size: 18px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+{% block body %}
+  <div class="page-container">
+    <div class="contact-container">
+      <h2 class="title"><b>ℂ𝕠𝕟𝕥𝕒𝕔𝕥 𝕦𝕤</b></h2>
+      <p>We're here to help you with your health and nutrition needs. Contact us using the following information:</p>
+
+      <p class="info-item">
+        <strong>Company Name:</strong> Online Health and Nutrition Consultation
+      </p>
+      <p class="info-item">
+        <strong>Phone:</strong> 088-9059138837
+      </p>
+      <p class="info-item" >
+        <a href="mailto:2200090085csit@gmail.com" >Send an Email</a>
+      </p>
+      <p class="info-item">
+        <strong>Address:</strong> KL University, Vaddeswaram
+      </p>
+      <p class="info-item">
+        <strong>Business Hours:</strong> Morning: 9:00AM to Evening: 7:00PM
+      </p>
+
+      <p class="contact-message">
+        Whether you have questions, need advice, or want to schedule a consultation, don't hesitate to get in touch. We're here to assist you on your health and nutrition journey.
+
+      </p>
+<a href="http://wa.me/+919065002554" >
+    <img src = "{% static 'whats.jpeg' %}"  alt="WhatsApp Icon" style="width: 50px; height: 50px; margin-right: 5px;">
+</a>
+    </div>
+    <div class="contact-container">
+      <h2 class="title"><b>𝔸𝕓𝕠𝕦𝕥 𝕦𝕤</b></h2>
+      <p>Welcome to Online Health and Nutrition Consultation! We are dedicated to your well-being and committed to helping you achieve your health and nutrition goals. Our team of experienced and passionate nutritionists and health experts is here to guide you on your journey to a healthier and happier life.</p>
+
+      <p><strong>Why Choose Us?</strong></p>
+      <ul>
+        <li><strong>Expertise:</strong> Our team comprises certified nutritionists and healthcare professionals with years of experience in the field. We stay up-to-date with the latest research and nutritional trends to provide you with the best guidance.</li>
+        <li><strong>Personalized Approach:</strong> We understand that every individual is unique. That's why we tailor our advice to your specific needs, ensuring that your health and nutritional plans are as unique as you are.</li>
+        <li><strong>Convenience:</strong> Our online platform allows you to access our services from the comfort of your home. No more waiting rooms or commutes. We're just a click away, ready to assist you.</li>
+        <li><strong>Supportive Community:</strong> Join our community of individuals committed to better health. Share your journey, gain support from others, and celebrate your successes together.</li>
+        <li><strong>Empowering You:</strong> Our goal is to empower you with knowledge and guidance, so you can make informed decisions about your health and nutrition. We believe in education as the key to lasting change.</li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>
